@@ -1,0 +1,24 @@
+{
+  "name": "element-plus-snippets",
+  "displayName": "Element Plus Snippets",
+  "description": "Code snippets for Element-Plus which is a Vue.js 3.0 UI Toolkit for Web",
+  "version": "0.1.96",
+  "publisher": "jingwang37",
+  "icon": "img/tool.png",
+  "engines": {
+    "vscode": "^1.46.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "path": "./snippets/snippets.code-snippets"
+      },
+      {
+        "path": "./snippets/element-ui.code-snippets"
+      }
+    ]
+  }
+}
