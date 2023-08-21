@@ -407,7 +407,7 @@
 
   "数据展示: Pagination": {
     "prefix": "epp",
-    "body": ["<el-pagination", "\t@size-change=\"${1:sizeChange}\"", "\t@current-change=\"${2:currentChange}\"", "\tv-model:currentPage=\"${3:currentPage}\"", "\t:page-sizes=\"${4:[20, 40, 80, 100]}\"", "\t:page-size=\"${5:pageSize}\"", "\tlayout=\"total, sizes, prev, pager, next, jumper\"", "\t:total=\"${6:totalNum}\" background>", "\t:pager-count=\"${7:7}\">", "</el-pagination>", "${8}"],
+    "body": ["<el-pagination", "\t@size-change=\"${1:sizeChange}\"", "\t@current-change=\"${2:currentChange}\"", "\tv-model:currentPage=\"${3:currentPage}\"", "\t:page-sizes=\"${4:[20, 40, 80, 100]}\"", "\t:page-size=\"${5:pageSize}\"", "\tlayout=\"total, sizes, prev, pager, next, jumper\"", "\t:total=\"${6:totalNum}\" background", "\t:pager-count=\"${7:7}\">", "</el-pagination>", "${8}"],
     "description": "element-plus <el-pagination>"
   },
 
