@@ -145,13 +145,13 @@
 
   "Basic: Button": {
     "prefix": "epb",
-    "body": ["<el-button type=\"${1|primary,text,info,success,warning,danger|}\" size=\"${2|default,medium,small,mini|}\" @click=\"$3\">${4}</el-button>", "${5}"],
+    "body": ["<el-button type=\"${1|primary,text,info,success,warning,danger|}\" size=\"${2|default,small,large|}\" @click=\"$3\">${4}</el-button>", "${5}"],
     "description": "element-plus <el-button>"
   },
 
   "Basic: Button Group": {
     "prefix": "epbg",
-    "body": ["<el-button-group>", "\t<el-button type=\"${1|primary,text,info,success,warning,danger|}\" size=\"${2|default,medium,small,mini|}\" @click=\"$3\">${4}</el-button>", "\t<el-button type=\"${5|primary,text,info,success,warning,danger|}\" size=\"${2|default,medium,small,mini|}\" @click=\"$6\">${7}</el-button>", "</el-button-group>", "${8}"],
+    "body": ["<el-button-group>", "\t<el-button type=\"${1|primary,text,info,success,warning,danger|}\" size=\"${2|default,small,large|}\" @click=\"$3\">${4}</el-button>", "\t<el-button type=\"${5|primary,text,info,success,warning,danger|}\" size=\"${2|default,small,large|}\" @click=\"$6\">${7}</el-button>", "</el-button-group>", "${8}"],
     "description": "element-plus <el-button-group>"
   },
 
@@ -175,7 +175,7 @@
 
   "Form 表单组件 Radio Button Group": {
     "prefix": "eprbg",
-    "body": ["<el-radio-group v-model=\"$1\" size=\"${2|normal,medium,small,mini|}\" @change=\"$3\">", "\t<el-radio-button v-for=\"${4:item} in ${5:items}\" :key=\"${4:item}.${6:key}\" :label=\"${4:item}.${7:label}\">", "\t\t{{${4:item}.${8:title}}}", "\t</el-radio-button>", "</el-radio-group>", "${9}"],
+    "body": ["<el-radio-group v-model=\"$1\" size=\"${2|default,small,large|}\" @change=\"$3\">", "\t<el-radio-button v-for=\"${4:item} in ${5:items}\" :key=\"${4:item}.${6:key}\" :label=\"${4:item}.${7:label}\">", "\t\t{{${4:item}.${8:title}}}", "\t</el-radio-button>", "</el-radio-group>", "${9}"],
     "description": "element-plus <el-radio-group> with <el-radio-button>"
   },
 
@@ -199,7 +199,7 @@
 
   "Form 表单组件 Checkbox Button Group": {
     "prefix": "epcbg",
-    "body": ["<el-checkbox-group v-model=\"$1\" size=\"${2|normal,medium,small,mini|}\"  @change=\"${3}\">", "\t<el-checkbox-button v-for=\"${4:item} in ${5:items}\" :key=\"${4:item}.${6:key}\" :label=\"${4:item}.${7:label}\">", "\t\t{{${4:item}.${8:label}}}", "\t</el-checkbox-button>", "</el-checkbox-group>", "${9}"],
+    "body": ["<el-checkbox-group v-model=\"$1\" size=\"${2|default,small,large|}\"  @change=\"${3}\">", "\t<el-checkbox-button v-for=\"${4:item} in ${5:items}\" :key=\"${4:item}.${6:key}\" :label=\"${4:item}.${7:label}\">", "\t\t{{${4:item}.${8:label}}}", "\t</el-checkbox-button>", "</el-checkbox-group>", "${9}"],
     "description": "element-plus <el-checkbox-group> with <el-checkbox-button>"
   },
 
@@ -211,7 +211,7 @@
 
   "Form 表单组件 Input": {
     "prefix": "epi",
-    "body": ["<el-input v-model=\"$1\" placeholder=\"$2\" size=\"${3|normal,medium,small,mini|}\" clearable @change=\"$4\">$5</el-input>", "${6}"],
+    "body": ["<el-input v-model=\"$1\" placeholder=\"$2\" size=\"${2|default,small,large|}\" clearable @change=\"$4\">$5</el-input>", "${6}"],
     "description": "element-plus <el-input>"
   },
 
@@ -235,7 +235,7 @@
 
   "Form 表单组件 InputNumber": {
     "prefix": "epin",
-    "body": ["<el-input-number v-model=\"$1\" size=\"${2|normal,medium,small,mini|}\" label=\"$3\"", "\t:min=\"${4:1}\" :max=\"${5:10}\" :step=\"${6:1}\" :controls=\"${7|true,false|}\" controls-position=\"${8|both,right|}\" @change=\"$9\">", "</el-input-number>", "${10}"],
+    "body": ["<el-input-number v-model=\"$1\" size=\"${2|default,small,large|}\" label=\"$3\"", "\t:min=\"${4:1}\" :max=\"${5:10}\" :step=\"${6:1}\" :controls=\"${7|true,false|}\" controls-position=\"${8|both,right|}\" @change=\"$9\">", "</el-input-number>", "${10}"],
     "description": "element-plus <el-input-number>"
   },
 
@@ -289,49 +289,49 @@
 
   "Form 表单组件 Time Select": {
     "prefix": "epts",
-    "body": ["<el-time-select v-model=\"$1\" size=\"${2|normal,medium,small,mini|}\" placeholder=\"$3\"", "\t:picker-options=\"{", "\t\tstart: '${4}',", "\t\tstep: '${5:00:30}',", "\t\tend: '${6}',", "\t}\"", "\tchange=\"${7}\">", "</el-time-select>", "${8}"],
+    "body": ["<el-time-select v-model=\"$1\" size=\"${2|default,small,large|}\" placeholder=\"$3\"", "\t:picker-options=\"{", "\t\tstart: '${4}',", "\t\tstep: '${5:00:30}',", "\t\tend: '${6}',", "\t}\"", "\tchange=\"${7}\">", "</el-time-select>", "${8}"],
     "description": "element-plus <el-time-select>"
   },
 
   "Form 表单组件 Time Select Range": {
     "prefix": "eptsr",
-    "body": ["<el-time-select v-model=\"$1\" size=\"${2|normal,medium,small,mini|}\" placeholder=\"$3\"", "\t:picker-options=\"{", "\t\tstart: '${4}',", "\t\tstep: '${5:00:30}',", "\t\tend: '${6}',", "\t}\">", "</el-time-select>", "<el-time-select v-model=\"$7\" size=\"${2|normal,medium,small,mini|}\" placeholder=\"$8\"", "\t:picker-options=\"{", "\t\tstart: '${4}',", "\t\tstep: '${5:00:30}',", "\t\tend: '${6}',", "\t\tminTime: $1", "\t}\">", "</el-time-select>", "${9}"],
+    "body": ["<el-time-select v-model=\"$1\" size=\"${2|default,small,large|}\" placeholder=\"$3\"", "\t:picker-options=\"{", "\t\tstart: '${4}',", "\t\tstep: '${5:00:30}',", "\t\tend: '${6}',", "\t}\">", "</el-time-select>", "<el-time-select v-model=\"$7\" size=\"${2|default,small,large|}\" placeholder=\"$8\"", "\t:picker-options=\"{", "\t\tstart: '${4}',", "\t\tstep: '${5:00:30}',", "\t\tend: '${6}',", "\t\tminTime: $1", "\t}\">", "</el-time-select>", "${9}"],
     "description": "element-plus <el-time-select> range"
   },
 
   "Form 表单组件 TimePicker": {
     "prefix": "eptp",
-    "body": ["<el-time-picker v-model=\"$1\" size=\"${2|normal,medium,small,mini|}\" arrow-control", "\t:picker-options=\"{", "\t\tselectableRange: '${3:18:30:00} - ${4:20:30:00}'", "\t}\"", "\tplaceholder=\"${5:任意时间点}\">", "</el-time-picker>", "${6}"],
+    "body": ["<el-time-picker v-model=\"$1\" size=\"${2|default,small,large|}\" arrow-control", "\t:picker-options=\"{", "\t\tselectableRange: '${3:18:30:00} - ${4:20:30:00}'", "\t}\"", "\tplaceholder=\"${5:任意时间点}\">", "</el-time-picker>", "${6}"],
     "description": "element-plus <el-time-picker>"
   },
 
   "Form 表单组件 TimePicker Range": {
     "prefix": "eptpr",
-    "body": ["<el-time-picker v-model=\"$1\" size=\"${2|normal,medium,small,mini|}\" arrow-control", "\tis-range range-separator=\"${3:-}\" start-placeholder=\"$4\" end-placeholder=\"$5\"", "\t:picker-options=\"{", "\t\tselectableRange: '${6:18:30:00} - ${7:20:30:00}'", "\t}\">", "</el-time-picker>", "${8}"],
+    "body": ["<el-time-picker v-model=\"$1\" size=\"${2|default,small,large|}\" arrow-control", "\tis-range range-separator=\"${3:-}\" start-placeholder=\"$4\" end-placeholder=\"$5\"", "\t:picker-options=\"{", "\t\tselectableRange: '${6:18:30:00} - ${7:20:30:00}'", "\t}\">", "</el-time-picker>", "${8}"],
     "description": "element-plus <el-time-picker is-range>"
   },
 
   "Form 表单组件 DatePicker": {
     "prefix": "epdp",
-    "body": ["<el-date-picker v-model=\"$1\" type=\"${2|year,month,date,dates,week|}\" size=\"${3|normal,medium,small,mini|}\" placeholder=\"${4:选择日期时间}\">", "</el-date-picker>", "${5}"],
+    "body": ["<el-date-picker v-model=\"$1\" type=\"${2|year,month,date,dates,week|}\" size=\"${2|default,small,large|}\" placeholder=\"${4:选择日期时间}\">", "</el-date-picker>", "${5}"],
     "description": "element-plus <el-date-picker>"
   },
 
   "Form 表单组件 DatePicker Range": {
     "prefix": "epdpr",
-    "body": ["<el-date-picker v-model=\"$1\" type=\"${2|daterange,monthrange|}\" size=\"${3|normal,medium,small,mini|}\"", "\trange-separator=\"${4:-}\" start-placeholder=\"$5\" end-placeholder=\"$6\">", "</el-date-picker>", "${7}"],
+    "body": ["<el-date-picker v-model=\"$1\" type=\"${2|daterange,monthrange|}\" size=\"${2|default,small,large|}\"", "\trange-separator=\"${4:-}\" start-placeholder=\"$5\" end-placeholder=\"$6\">", "</el-date-picker>", "${7}"],
     "description": "element-plus <el-date-picker>"
   },
 
   "Form 表单组件 DateTimePicker": {
     "prefix": "epdtp",
-    "body": ["<el-date-picker v-model=\"$1\" type=\"datetime\" size=\"${2|normal,medium,small,mini|}\" placeholder=\"${3:选择日期时间}\">", "</el-date-picker>", "${4}"],
+    "body": ["<el-date-picker v-model=\"$1\" type=\"datetime\" size=\"${2|default,small,large|}\" placeholder=\"${3:选择日期时间}\">", "</el-date-picker>", "${4}"],
     "description": "element-plus <el-date-picker type=\"datetime\">"
   },
 
   "Form 表单组件 DateTimePicker Range": {
     "prefix": "epdtpr",
-    "body": ["<el-date-picker v-model=\"$1\" type=\"datetimerange\" size=\"${2|normal,medium,small,mini|}\"", "\trange-separator=\"${3:-}\" start-placeholder=\"$4\" end-placeholder=\"$5\">", "</el-date-picker>", "${6}"],
+    "body": ["<el-date-picker v-model=\"$1\" type=\"datetimerange\" size=\"${2|default,small,large|}\"", "\trange-separator=\"${3:-}\" start-placeholder=\"$4\" end-placeholder=\"$5\">", "</el-date-picker>", "${6}"],
     "description": "element-plus <el-date-picker type=\"datetime\">"
   },
 
@@ -349,7 +349,7 @@
 
   "Form 表单组件 ColorPicker": {
     "prefix": "epcp",
-    "body": ["<el-color-picker v-model=\"$1\" size=\"${2|normal,medium,small,mini|}\" :show-alpha=\"${3|true,false|}\" ></el-color-picker>", "${4}"],
+    "body": ["<el-color-picker v-model=\"$1\" size=\"${2|default,small,large|}\" :show-alpha=\"${3|true,false|}\" ></el-color-picker>", "${4}"],
     "description": "element-plus <el-color-picker>"
   },
 
@@ -361,13 +361,13 @@
 
   "Form 表单组件 Form": {
     "prefix": "epf",
-    "body": ["<el-form :model=\"${1:form}\" ref=\"${2:form}\" :rules=\"${3:rules}\" label-width=\"80px\" :inline=\"${4|false,true|}\" size=\"${5|normal,medium,small,mini|}\">", "\t<el-form-item label=\"$6\">", "\t\t<el-input v-model=\"${1:form}.${7}\"></el-input>", "\t</el-form-item>", "\t<el-form-item>", "\t\t<el-button type=\"primary\" @click=\"onSubmit\">${8:立即创建}</el-button>", "\t\t<el-button>${9:取消}</el-button>", "\t</el-form-item>", "</el-form>", "${10}"],
+    "body": ["<el-form :model=\"${1:form}\" ref=\"${2:form}\" :rules=\"${3:rules}\" label-width=\"80px\" :inline=\"${4|false,true|}\" size=\"${5|default,small,large|}\">", "\t<el-form-item label=\"$6\">", "\t\t<el-input v-model=\"${1:form}.${7}\"></el-input>", "\t</el-form-item>", "\t<el-form-item>", "\t\t<el-button type=\"primary\" @click=\"onSubmit\">${8:立即创建}</el-button>", "\t\t<el-button>${9:取消}</el-button>", "\t</el-form-item>", "</el-form>", "${10}"],
     "description": "element-plus <el-form>"
   },
 
   "Form 表单组件 Form Item": {
     "prefix": "epfi",
-    "body": ["<el-form-item label=\"$1\" size=\"${2|normal,medium,small,mini|}\">", "\t$3", "</el-form-item>", "${4}"],
+    "body": ["<el-form-item label=\"$1\" size=\"${2|default,small,large|}\">", "\t$3", "</el-form-item>", "${4}"],
     "description": "element-plus <el-form-item>"
   },
 
@@ -389,7 +389,7 @@
 
   "数据展示: Tag": {
     "prefix": "epta",
-    "body": ["<el-tag type=\"${1|danger,info,success,warning|}\" size=\"${2|normal,medium,small,mini|}\"  effect=\"${3|dark,plain|}\" closable @close=\"${4}\">$5</el-tag>", "${6}"],
+    "body": ["<el-tag type=\"${1|danger,info,success,warning|}\" size=\"${2|default,small,large|}\"  effect=\"${3|dark,plain|}\" closable @close=\"${4}\">$5</el-tag>", "${6}"],
     "description": "element-plus <el-tag>"
   },
 
@@ -419,7 +419,7 @@
 
   "数据展示: Avatar": {
     "prefix": "epav",
-    "body": ["<el-avatar icon=\"el-icon-user-solid\" size=\"${1|large,medium,small|}\" shape=\"${2|circle,square|}\" :src=\"${3}\" fit=\"${4|fill,contain,cover,none,scale-down|}\"></el-avatar>", "${5}"],
+    "body": ["<el-avatar icon=\"el-icon-user-solid\" size=\"${1|default,small,large|}\" shape=\"${2|circle,square|}\" :src=\"${3}\" fit=\"${4|fill,contain,cover,none,scale-down|}\"></el-avatar>", "${5}"],
     "description": "element-plus <el-avatar>"
   },
 
@@ -561,7 +561,7 @@
 
   "Navigation: Dropdown": {
     "prefix": "epdr",
-    "body": ["<el-dropdown trigger=\"${1:click}\" size=\"${2|default,medium,small,mini|}\" split-button type=\"${3|primary,success,warning,danger,info,text|}\" @command=\"$4\">", "\t${5:title}", "\t<template #dropdown>", "\t<el-dropdown-menu>", "\t\t<el-dropdown-item v-for=\"${6:item} in ${7:items}\"", "\t\t\t:key=\"${6:item}.${8:key}\" :command=\"${6:item}.${9:command}\">", "\t\t\t{{${6:item}.${10:title}}}", "\t\t</el-dropdown-item>", "\t</el-dropdown-menu>", "\t</el-dropdown>", "</template>", "${11}"],
+    "body": ["<el-dropdown trigger=\"${1:click}\" size=\"${2|default,small,large|}\" split-button type=\"${3|primary,success,warning,danger,info,text|}\" @command=\"$4\">", "\t${5:title}", "\t<template #dropdown>", "\t<el-dropdown-menu>", "\t\t<el-dropdown-item v-for=\"${6:item} in ${7:items}\"", "\t\t\t:key=\"${6:item}.${8:key}\" :command=\"${6:item}.${9:command}\">", "\t\t\t{{${6:item}.${10:title}}}", "\t\t</el-dropdown-item>", "\t</el-dropdown-menu>", "\t</el-dropdown>", "</template>", "${11}"],
     "description": "element-plus <el-dropdown> with <el-dropdown-item>"
   },
 
@@ -639,13 +639,13 @@
 
   "Others: Collapse Timeline": {
     "prefix": "epti",
-    "body": ["<el-timeline :reverse=\"$1\">", "\t<el-timeline-item v-for=\"${2:item} in ${3:items}\"", "\t\t:key=\"${2:item}.${4:id}\"", "\t\t:timestamp=\"${2:item}.${5:timestamp}\"", "\t\tplacement=\"${6|top,bottom|}\"", "\t\ttype=\"${7|primary,success,warning,danger,info|}\"", "\t\tsize=\"${8|normal,large|}\">", "\t\t${9:<!-- content -->}", "\t</el-timeline-item>", "</el-timeline>", "${10}"],
+    "body": ["<el-timeline :reverse=\"$1\">", "\t<el-timeline-item v-for=\"${2:item} in ${3:items}\"", "\t\t:key=\"${2:item}.${4:id}\"", "\t\t:timestamp=\"${2:item}.${5:timestamp}\"", "\t\tplacement=\"${6|top,bottom|}\"", "\t\ttype=\"${7|primary,success,warning,danger,info|}\"", "\t\tsize=\"${8|default,large|}\">", "\t\t${9:<!-- content -->}", "\t</el-timeline-item>", "</el-timeline>", "${10}"],
     "description": "element-plus <el-timeline> with <el-timeline-item>"
   },
 
   "Others: Collapse Timeline Item": {
     "prefix": "eptii",
-    "body": ["<el-timeline-item", "\ttimestamp=\"${1}\"", "\tplacement=\"${2|top,bottom|}\"", "\ttype=\"${3|primary,success,warning,danger,info|}\"", "\tsize=\"${4|normal,large|}\">", "\t${5:<!-- content -->}", "</el-timeline-item>", "${6}"],
+    "body": ["<el-timeline-item", "\ttimestamp=\"${1}\"", "\tplacement=\"${2|top,bottom|}\"", "\ttype=\"${3|primary,success,warning,danger,info|}\"", "\tsize=\"${4|default,large|}\">", "\t${5:<!-- content -->}", "</el-timeline-item>", "${6}"],
     "description": "element-plus <el-timeline-item>"
   },
 
